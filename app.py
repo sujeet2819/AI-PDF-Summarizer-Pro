@@ -195,3 +195,4 @@ with col2:
         except Exception as e:
             st.error(f"Error answering question: {e}")
 
+
