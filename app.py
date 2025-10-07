@@ -25,7 +25,7 @@ st.markdown(
 # ---------------------------
 # API CONFIG
 # ---------------------------
-api_key = "AIzaSyC1DoPjFmoiDU70YZn7Ixatdn-ofjLDdNQ"
+api_key = "Your api key"
 
 try:
     genai.configure(api_key=api_key)
@@ -194,3 +194,4 @@ with col2:
             )
         except Exception as e:
             st.error(f"Error answering question: {e}")
+
