@@ -1,0 +1,71 @@
+📄 AI PDF Summarizer Pro
+This is a Streamlit web application that uses Google's Gemini API to summarize PDF documents. The application allows users to upload a PDF file, get a summary of its content, and ask questions about the document.
+
+Features
+PDF Upload: Easily upload PDF files.
+
+Text Extraction: Extracts all text content from the uploaded PDF.
+
+AI-Powered Summarization: Utilizes the gemini-2.5-flash model to generate summaries in various styles (Concise, Detailed, Bullet Points) and languages.
+
+Chunk-based Processing: Handles large PDFs by breaking the content into manageable chunks for summarization.
+
+Question Answering: Ask specific questions about the PDF content and get answers from the AI.
+
+Download Options: Download the final summary as a .txt or .docx file.
+
+Customization: Adjust summary style, language, chunk size, and overlap settings.
+
+Setup
+Prerequisites
+Python 3.8 or higher
+
+A Google API Key for the Gemini API.
+
+Installation
+Clone this repository or save the app.py and requirements.txt files to your local machine.
+
+Navigate to the project directory in your terminal.
+
+Install the required Python packages:
+
+pip install -r requirements.txt
+
+Set up your Google API Key:
+
+Replace "YOUR_API_KEY_HERE" in the app.py file with your actual API key.
+
+api_key = "YOUR_API_KEY_HERE"
+
+Alternatively, you can set it as an environment variable for better security:
+
+export GOOGLE_API_KEY="YOUR_API_KEY_HERE"
+
+And modify the app.py code to read from the environment variable:
+
+import os
+api_key = os.getenv("GOOGLE_API_KEY")
+
+How to Run
+From your terminal, run the following command:
+
+streamlit run app.py
+
+Your web browser will automatically open the application. If not, navigate to http://localhost:8501.
+
+Usage
+Upload a PDF: Use the "Upload a PDF" file uploader on the left side of the page.
+
+Adjust Settings: In the sidebar on the left, you can customize the summary style, language, and chunking parameters.
+
+Generate Summary: Click the "Generate Summary" button to start the summarization process.
+
+Ask Questions: After the summary is generated, you can type a question in the "Ask Questions from PDF" section and click "Get Answer" to receive a response based on the document content.
+
+Download: Use the "Download TXT" or "Download DOCX" buttons to save the summary.
+
+Code Structure
+app.py: The main Streamlit application script containing all the logic for the UI, text extraction, summarization, and question-answering.
+
+requirements.txt: Lists all the necessary Python dependencies for the project.
+run the program  -  python -m streamlit run app.py
